@@ -1,0 +1,34 @@
+{
+  "name": "redux-rest-easy-example",
+  "version": "1.0.0",
+  "description": "an exmple to how use redux-rest-easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/index.js",
+    "dev:start": "nodemon src/server/index.js",
+    "build": "babel src/client/index.js --out-file ./public/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alaa-Khattab/redux-rest-easy-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alaa-Khattab/redux-rest-easy-example/issues"
+  },
+  "homepage": "https://github.com/Alaa-Khattab/redux-rest-easy-example#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.3",
+    "npm": "^6.0.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "to": "^0.2.9",
+    "update": "^0.7.4"
+  }
+}

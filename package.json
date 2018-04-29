@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server/index.js",
-    "dev:start": "nodemon src/server/index.js",
-    "build": "babel src/client/index.js --out-file ./public/index.js"
+    "start": "node ./src/server/index.js",
+    "devStart": "npm-run-all --parallel watchClient watchServer",
+    "build": "webpack",
+    "watchClient": "webpack --watch",
+    "watchServer": "nodemon src/server/index.js",
+    "clean": "rimraf public/bundle.js node_modules"
   },
   "repository": {
     "type": "git",
@@ -21,14 +24,20 @@
   "homepage": "https://github.com/Alaa-Khattab/redux-rest-easy-example#readme",
   "dependencies": {
     "axios": "^0.18.0",
-    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "express": "^4.16.3",
     "npm": "^6.0.0",
+    "npm-run-all": "^4.1.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "to": "^0.2.9",
-    "update": "^0.7.4"
+    "update": "^0.7.4",
+    "webpack": "^4.6.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "webpack-cli": "^2.0.15"
   }
 }
